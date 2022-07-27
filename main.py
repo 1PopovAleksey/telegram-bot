@@ -6,7 +6,8 @@ bot = telebot.TeleBot('5455650810:AAEjF19EDC0tZy6Sukp4fIw6gnuIupATqjY')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    mess = f'Hello, <b>{message.from_user.first_name} {message.from_user.last_name}, are u like pets?)</b>'
+    mess = f'Hello, <b>{message.from_user.first_name} {message.from_user.last_name}</b>, write <b>/help</b> to ' \
+           f'understand what the bot can do)'
     bot.send_message(message.chat.id, mess, parse_mode='html')
 
 
